@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React, { useState } from 'react';
+import FlashcardList from './components/FlashcardList';
+import Dashboard from './components/DBoard';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [flashcards, setFlashcards] = useState([]);
+    const [currentPage, setCurrentPage] = useState('home');
+
+    const handleNavigation = (page) => {
+        setCurrentPage(page);
+    };
+
+    return (
+        <div className="App">
+           
+            <nav>
+                <ul>
+                    <li>
+                        <button onClick={() => handleNavigation('home')}>Home</button>
+                    </li>
+                    <li>
+                        <button onClick={() => handleNavigation('admin')}>Dashboard</button>
+                    </li>
+                </ul>
+            </nav>
+            <main>
+                {currentPage === 'home' && <FlashcardList flashcards={flashcards} />}
+                {currentPage === 'admin' && (
+                    <Dashboard flashcards={flashcards} setFlashcards={setFlashcards} />
+                )}
+            </main>
+        </div>
+    );
 }
 
 export default App;
