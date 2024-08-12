@@ -1,7 +1,6 @@
-// src/components/FlashcardList.js
 import React, { useState } from 'react';
 import Flashcard from './Flashcrd';
-import './FlashcardList.css'; // Ensure this path is correct
+import './FlashcardList.css'; 
 
 const FlashcardList = ({ flashcards }) => {
     const [currentIndex, setCurrentIndex] = useState(0);

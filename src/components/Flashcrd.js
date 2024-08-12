@@ -1,4 +1,3 @@
-// src/components/Flashcard.js
 import React, { useState } from 'react';
 import './Flashc.css';
 

@@ -1,37 +1,34 @@
-/* src/components/FlashcardList.css */
-
 
 .flashcard-container {
-    margin-bottom: 20px; /* Space between flashcard and buttons */
-    
+    margin-bottom: 20px;
 }
 
 .navigation-buttons {
     display: flex;
-    gap: 20px; /* Space between buttons */
+    gap: 20px; 
 }
 
 .navigation-buttons button {
-    background: linear-gradient(45deg, #007BFF, #00BFFF); /* Gradient background */
+    background: linear-gradient(45deg, #007BFF, #00BFFF);
     color: white;
     border: none;
     padding: 12px 24px;
     font-size: 16px;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px; 
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    align-items: center; /* Center the flashcard and buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    align-items: center; 
     margin: 20px auto;
 }
 
 .navigation-buttons button:hover {
-    background: linear-gradient(45deg, #0056b3, #0099cc); /* Darker gradient on hover */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
+    background: linear-gradient(45deg, #0056b3, #0099cc); 
+    transform: scale(1.05); 
 }
 
 .navigation-buttons button:disabled {
-    background: #4169E1; /* Gray background for disabled state */
+    background: #4169E1; 
     cursor: not-allowed;
-    box-shadow: none; /* Remove shadow for disabled state */
+    box-shadow: none; 
 }
